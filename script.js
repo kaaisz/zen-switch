@@ -1,35 +1,34 @@
 'use strict';
 
 const contents = [
-  '1', 'relax',
-  '2', 'relax',
-  '3', 'relax',
-  '4', 'relax',
-  '5', 'relax',
-  '6', 'relax',
-  '7', 'relax',
-  '8', 'relax',
+  'inhale', 'exhale',
+  'inhale', 'exhale',
+  'inhale', 'exhale',
+  'inhale', 'exhale',
+  'inhale', 'exhale',
+  'inhale', 'exhale',
+  'inhale', 'exhale',
 ];
 
 //to reverse after all counts are finished.
-const sequence = [...contents, 'relax', ...contents.slice().reverse(), 'relax'];
+const sequence = [...contents, 'exhale', ...contents.slice().reverse(), 'exhale'];
 
 //get element to activate animation by clicking button
 const circle = document.querySelector('#circle');
 const button = document.querySelector('#animateButton');
-// const endMessage = document.querySelector('#endMessage');
+const endMessage = document.querySelector('#endMessage');
 
 //finish and appear endMessage when button has been clicked again
 const finishExercise = () =>{
   // button.removeAttribute('disabled');
-  document.querySelector('#endMessage').innerHTML = "Well done.";
+  endMessage.innerHTML = "Well done. You've got today:)";
   button.innerHTML = "Start Whenever You're Ready";
 }
 
 const animate = (item, index) => {
   setTimeout(() => {
     circle.innerText = item;
-    if (item === 'relax') {
+    if (item === 'exhale') {
       circle.className = 'circle';
     } else {
       circle.classList.add('circle-big', 'circle-' + item);
