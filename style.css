@@ -1,4 +1,8 @@
 @charset 'utf-8';
+@font-face{
+  font-family:"Apercu";
+  src:url("Apercu-Regular.woff") format("woff");
+}
 
 *{
   box-sizing: border-box;
@@ -83,7 +87,7 @@ body{
 }
 
 .circle-big{
-  transform : scale(2, 2);
+  transform : scale(1.75, 1.75);
 }
 
 .circle-1{

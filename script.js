@@ -6,12 +6,10 @@ const contents = [
   'inhale', 'exhale',
   'inhale', 'exhale',
   'inhale', 'exhale',
-  'inhale', 'exhale',
-  'inhale', 'exhale',
 ];
 
 //to reverse after all counts are finished.
-const sequence = [...contents, 'exhale', ...contents.slice().reverse(), 'exhale'];
+const sequence = [...contents, ...contents.slice(), 'exhale'];
 
 //get element to activate animation by clicking button
 const circle = document.querySelector('#circle');
@@ -42,7 +40,7 @@ const animate = (item, index) => {
 
 //create animation for when clicking buttons
 const animateAll = () => {
-  // button.setAttribute('disabled', true);
+  button.setAttribute('disabled', true);
   button.innerHTML = "Finish Exercise";
   endMessage.innerHTML = '';
   sequence.forEach((item, index) => {
