@@ -16,8 +16,8 @@
 body{
   min-height: 100%;
   width: 100%;
-  background: #e5f2d6;
-  color: #7fa190;
+  background: #E5F2D6;
+  color: #7FA190;
 }
 
 .main{
@@ -41,8 +41,8 @@ body{
 .main button{
   display: inline-block;
   cursor: pointer;
-  background: #7fa190;
-  color: #e5f2d6;
+  background: #7FA190;
+  color: #E5F2D6;
   outline: none;
   margin: 1rem 0 0;
   padding: .5rem 1rem;
@@ -55,7 +55,7 @@ body{
 
 .main button:disabled{
   filter: grayscale(50%);
-  cursor: none;
+  /* cursor: none; */
 }
 
 .container{
@@ -73,13 +73,49 @@ body{
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  color: #e5f2d6;
-  background: #91b588;
+  color: #E5F2D6;
+  background: #91B588;
   margin: 1rem 0 0;
   height: 150px;
   width: 150px;
   border-radius: 75px; /*50% of width & height*/
-  transition: transform 2.5s, background-color 2.5s;
+  transition: transform 5s, background-color 2.5s;
+}
+
+.circle-big{
+  transform : scale(2, 2);
+}
+
+.circle-1{
+  background: #C0D98A;
+}
+
+.circle-2{
+  background: #78C2A9;
+}
+
+.circle-3{
+  background: #99DEB4;
+}
+
+.circle-4{
+  background: #A4CCD1;
+}
+
+.circle-5{
+  background: #A0BD8E;
+}
+
+.circle-6{
+  background: #92B9B1;
+}
+
+.circle-7{
+  background: #C3C7C8;
+}
+
+.circle-8{
+  background: #A1AEBA;
 }
 
 @media screen and(min-height: 800px){
