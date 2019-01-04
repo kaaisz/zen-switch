@@ -1,1 +1,95 @@
 @charset 'utf-8';
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align:baseline;
+}
+
+*::before, *::after{
+  box-sizing: inherit;
+}
+
+body{
+  min-height: 100%;
+  width: 100%;
+  background: #e5f2d6;
+  color: #7fa190;
+}
+
+.main{
+  text-align: center;
+  padding: 5vh 5vw;
+  font-family: 'Apercu', 'Apercu Pro', 'Avenir', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', Arial, sans-serif;
+}
+
+.main h1{
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 3.5rem;
+}
+
+.main p{
+  margin: 0 auto .5rem;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.main button{
+  display: inline-block;
+  cursor: pointer;
+  background: #7fa190;
+  color: #e5f2d6;
+  outline: none;
+  margin: 1rem 0 0;
+  padding: .5rem 1rem;
+  border-radius: 15px;
+}
+
+.main button:hover{
+  filter: brightness(110%);
+}
+
+.main button:disabled{
+  filter: grayscale(50%);
+  cursor: none;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 100%;
+}
+
+.circle{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #e5f2d6;
+  background: #91b588;
+  margin: 1rem 0 0;
+  height: 150px;
+  width: 150px;
+  border-radius: 75px; /*50% of width & height*/
+  transition: transform 2.5s, background-color 2.5s;
+}
+
+@media screen and(min-height: 800px){
+  .main{
+    padding: 10vh 0;
+  }
+  .main h1{
+    margin-bottom: 1rem;
+  }
+  .main p{
+    margin: 0 auto 1rem;
+  }
+}
